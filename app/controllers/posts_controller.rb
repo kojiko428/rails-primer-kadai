@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
   def index
    @posts = Post.all
   end
@@ -9,10 +8,10 @@ class PostsController < ApplicationController
   end
   def create
    @post =Post.new(post_params)
-   if params[:back]
+    if params[:back]
          render :new
-    else
-    if @post.save
+    # else if から変更
+    elsif @post.save
        redirect_to posts_path, notice: "投稿を作成しました！"
      else
        render :new
