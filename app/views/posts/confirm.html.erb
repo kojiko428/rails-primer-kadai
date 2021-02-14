@@ -1,6 +1,6 @@
 <!-- _form.htmlの内容を使用 -->
 
-<h3>以下の内容で、送信する。</h3>
+<h3>以下の内容で投稿する！</h3>
 <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
   <p>内容:<%= @post.content %></p>
