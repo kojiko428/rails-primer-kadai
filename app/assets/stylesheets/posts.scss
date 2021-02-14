@@ -1,3 +1,103 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// index css追加
+// p { color:#0000ff; }
+
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+ height: 100%;
+}
+
+.header {
+  background-color: #00acee;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.top_menu li {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.logo_image {
+   height: 50px;
+    width: 50px;
+    float: left;
+    margin: 0;
+}
+
+ul {
+  /* 余白を削除 */
+  margin: 0;
+  padding: 0;
+}
+li {
+  /* リスト先頭の黒丸を削除 */
+  list-style: none;
+}
+// トップメニュー
+.top_menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+// マウスオーバーでアンダーライン
+.top_menu li a:hover {
+  text-decoration: underline;
+}
+
+
+.side_menu {
+  color: #000;
+  text-decoration: none;
+}
+
+.side_menu p{
+  color: #F00;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.content{
+  width: 660px;
+  margin-left:20px;
+  float: left;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  background-color: #00acee;
+  display: table;
+}
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}

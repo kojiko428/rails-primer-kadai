@@ -1,9 +1,34 @@
 <!-- _form.htmlの内容を使用 -->
 
-<h3>以下の内容で投稿する！</h3>
-<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
-  <%= form.hidden_field :content %>
-  <p>内容:<%= @post.content %></p>
-  <%= form.submit  "登録する" %>
-   <%= form.submit "戻る", name: 'back' %>
-<% end %>
+<body>
+  <header class="header">
+    <img src="/assets/logo.jpg"  alt="" class="logo_image">
+    <nav>
+     <ul class="top_menu clearfix">
+       <li><a href="http://localhost:3000/posts/">投稿一覧へ戻る</a></li>
+    </nav>
+  </header>
+
+  <aside class="side_menu">
+  <h3>以下の内容で投稿する?</h3>
+  </aside>
+
+<article class="content">
+
+  <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+    <%= form.hidden_field :content %>
+    <p>内容:<%= @post.content %></p>
+    <%= form.submit  "はい" %>
+     <%= form.submit "いいえ", name: 'back' %>
+  <% end %>
+
+  </article>
+
+
+  <footer class="footer">
+   <p>Copyright © 2021 Chatter INC All RIGHTS RESERVED.</p>
+  </footer>
+</body>
+
+
+</html>
